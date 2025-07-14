@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capybara Chat Pro</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div id="login-screen" class="screen">
+    <div class="login-box">
+      <h2>🐾 Capybara Chat Pro</h2>
+      <input type="text" id="username" placeholder="Usuario" />
+      <input type="password" id="password" placeholder="Contraseña" />
+      <button onclick="login()">Entrar</button>
+    </div>
+  </div>
+
+  <div id="chat-screen" class="screen hidden">
+    <header>
+      <img src="capybara.jpg" alt="Capibara" />
+      <h1>Capybara Chat</h1>
+    </header>
+
+    <main>
+      <div id="chat-window"></div>
+      <div class="input-area">
+        <button onclick="toggleEmojiPicker()">😊</button>
+        <input type="text" id="message-input" placeholder="Escribí tu mensaje..." />
+        <button onclick="sendMessage()">📤 Enviar</button>
+        <div class="tools">
+          <button onclick="getLocation()" title="Ubicación"><i class="fas fa-map-marker-alt"></i></button>
+          <button onclick="toggleNote()" title="Nota"><i class="fas fa-sticky-note"></i></button>
+          <button onclick="toggleDate()" title="Fecha"><i class="fas fa-calendar-day"></i></button>
+        </div>
+      </div>
+    </main>
+
+    <div id="emoji-picker" class="tool-box hidden">
+      😀 😃 😄 😁 😆 😅 😂 🤣 😊 😇 🙂 🙃 😉 😍 😘 😜 😎 🤓 🤩 😏 😤 😱 🥺 😢 😡 🐾
+    </div>
+
+    <div id="note-box" class="tool-box hidden">
+      <textarea id="notes" placeholder="Escribí una nota..."></textarea>
+      <button onclick="saveNotes()">Guardar Nota</button>
+    </div>
+
+    <div id="date-box" class="tool-box hidden">
+      <input type="date" id="important-date" />
+      <button onclick="saveDate()">Guardar Fecha</button>
+    </div>
+  </div>
+</body>
+</html>

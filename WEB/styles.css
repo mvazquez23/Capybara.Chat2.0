@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0ece3;
+}
+
+.screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.login-box input, .login-box button {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.login-box button {
+  background-color: #a67c52;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: #a67c52;
+  color: white;
+  padding: 10px;
+}
+
+header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 70px);
+}
+
+#chat-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.sent {
+  align-self: flex-end;
+  background-color: #d1ffd6;
+  padding: 10px;
+  border-radius: 12px;
+  margin: 5px;
+  max-width: 70%;
+}
+
+.received {
+  align-self: flex-start;
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 12px;
+  margin: 5px;
+  max-width: 70%;
+}
+
+.input-area {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #eee;
+  gap: 5px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.input-area button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #a67c52;
+  color: white;
+  cursor: pointer;
+}
+
+.tool-box {
+  padding: 10px;
+  background: #fff8dc;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.tool-box button {
+  background-color: #6db079;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#emoji-picker span {
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .login-box {
+    width: 95%;
+  }
+
+  .input-area {
+    flex-direction: column;
+  }
+}
